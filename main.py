@@ -236,7 +236,7 @@ def algoritmo_gioco():
                         st.write(i["nome"])
                 q=st.radio("Vuoi aggiungere?", ["si", "no"], index=None, key="q")
                 if q=="si":
-                    agg=st.radio("Quale stanza vuoi aggiungere?", add, index=None, key="agg")
+                    agg=st.radio("Quale stanza vuoi aggiungere?", add["nome"], index=None, key="agg")
                     for stanza in stanze_run:
                         if stanza["nome"]==agg:
                             if agg=="Dovecote":
@@ -821,3 +821,4 @@ def genera_stanze(i_pos, f_pos, grado, chiave, stanze_run, stanze_usate):
 
 
 algoritmo_gioco()
+
